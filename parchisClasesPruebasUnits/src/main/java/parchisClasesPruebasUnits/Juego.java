@@ -44,7 +44,7 @@ public class Juego {
 
 		} while (yo.consultarTablero() < tablero.consultarNumCasillas());
 
-		System.out.println("Fin del juego");
+		System.out.println("Finaliza el juego");
 
 	}
 
