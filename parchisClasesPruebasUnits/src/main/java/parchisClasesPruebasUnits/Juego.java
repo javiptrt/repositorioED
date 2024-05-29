@@ -15,12 +15,12 @@ public class Juego {
 		
 		Tablero tablero = new Tablero();
 		Dado dado1 = new Dado();
-		Jugador yo = new Jugador("Angel", tablero);
+		Jugador yo = new Jugador("Javi", tablero);
 		
 		do {
 
 			yo.tirarDado(dado1);
-			System.out.println("Ha salido el " + yo.consultarDado(dado1));
+			System.out.println("Ha salido el numero" + yo.consultarDado(dado1));
 
 		} while (yo.consultarDado(dado1) != 5);
 
