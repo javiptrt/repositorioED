@@ -15,16 +15,17 @@ public class Juego {
 		
 		Tablero tablero = new Tablero();
 		Dado dado1 = new Dado();
-		Jugador yo = new Jugador("Javi", tablero);
+		Jugador jug1 = new Jugador("Javi", tablero);
+		Jugador jug2 = new Jugador("Alba", tablero);
 		
 		do {
 
-			yo.tirarDado(dado1);
-			System.out.println("Ha salido el numero" + yo.consultarDado(dado1));
+			jug1.tirarDado(dado1);
+			System.out.println("Ha salido el numero" + jug1.consultarDado(dado1));
 
-		} while (yo.consultarDado(dado1) != 5);
+		} while (jug1.consultarDado(dado1) != 5);
 
-		yo.moverFicha(1);
+		jug1.moverFicha(1);
 		System.out.println("La ficha sale de casa");
 		
 		Dado dado2 = new Dado();
@@ -32,17 +33,17 @@ public class Juego {
 		int tirada;
 		do {
 
-			yo.tirarDado(dado1);
-			yo.tirarDado(dado2);
+			jug1.tirarDado(dado1);
+			jug1.tirarDado(dado2);
 			
-			tirada = yo.consultarDado(dado1)+yo.consultarDado(dado2);
+			tirada = jug1.consultarDado(dado1)+jug1.consultarDado(dado2);
 			
 			System.out.println("Ha salido el " + tirada);		
-			yo.moverFicha(tirada);
+			jug1.moverFicha(tirada);
 			
-			System.out.println("La ficha esta en la casilla "+yo.consultarTablero());
+			System.out.println("La ficha esta en la casilla "+jug1.consultarTablero());
 
-		} while (yo.consultarTablero() < tablero.consultarNumCasillas());
+		} while (jug1.consultarTablero() < tablero.consultarNumCasillas());
 
 		System.out.println("Finaliza el juego");
 
